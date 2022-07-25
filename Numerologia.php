@@ -11,9 +11,9 @@ include("Menu.php");
   </div>
   <form class="main-form">
     <h1 class= "titulo">Numerologia</h1>
-    <input name="name" type="text" placeholder="Ingrese Apellido/s y nombres">
+    <input name="name" type="text" value= "mendoza alejandro jose" placeholder="Ingrese Apellido/s y nombres">
     <div class="name-error error"></div>
-    <input class="dob" type="text" placeholder="Ingrese Fecha de Nacimiento">
+    <input class="dob" type="text" value= "1973-11-15" placeholder="Ingrese Fecha de Nacimiento">
     <div class="dob-error error"></div>
 
     <label for="save">
@@ -26,10 +26,13 @@ include("Menu.php");
   </form>
 
   <ul class="numberTypes">
-    <li class="life-path"></li>
-    <li class="soul-urge"></li>
-    <li class="destiny"></li>
-    <li class="personality"></li>
+    <li class="sendero-vida">
+
+
+    </li>
+    <li class="alma"></li>
+    <li class="destino"></li>
+    <li class="personalidad"></li>
   </ul>
 </div>
 </body>

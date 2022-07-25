@@ -8,29 +8,28 @@ function fnAceptar () {
    const form = document.querySelector(".main-form");
    const date = document.querySelector(".dob");
    const save = document.querySelector("#save");
-   const lifePath = document.querySelector(".life-path");
-   const soulUrge = document.querySelector(".soul-urge");
-   const destiny = document.querySelector(".destiny");
-   const personality = document.querySelector(".personality");
+   const senderoVida = document.querySelector(".sendero-vida");
+   const alma = document.querySelector(".alma");
+   const destino = document.querySelector(".destino");
+   const personalidad = document.querySelector(".personalidad");
  
    const nameError = document.querySelector(".name-error");
    const dateError = document.querySelector(".dob-error");
  
    const numberTypes = document.querySelectorAll(".numberTypes li");
-   const numberTypesMap = { lifePath, soulUrge, destiny, personality };
+   const numberTypesMap = { senderoVida, alma, destino, personalidad };
    const numberTypeCalculators = {
-     lifePath: calculateLifePath,
-     soulUrge: calculateSoulUrge,
-     destiny: calculateDestiny,
-     personality: calculatePersonality
+    senderoVida: calculateLifePath,
+     alma: calculateSoulUrge,
+     destino: calculateDestiny,
+     personalidad: calculatePersonality
    };
  
    const numberTypeLinks = {
      lifePath: "http://astrology-numerology.com/num-lifepath.html",
      soulUrge: "http://astrology-numerology.com/num-birthname.html#soul_urge",
      destiny: "http://astrology-numerology.com/num-birthname.html#destiny",
-     personality:
-       "http://astrology-numerology.com/num-birthname.html#inner_dreams"
+     personality:"http://astrology-numerology.com/num-birthname.html#inner_dreams"
    };
  
    for (let i = 0; i < 26; i++) {
@@ -137,14 +136,14 @@ function fnAceptar () {
        const numberTypeName = convertClassNameToCamelCase(numberType.className);
        const numberTypeFunc = numberTypeCalculators[numberTypeName];
        const funcArg =
-         numberTypeName !== "lifePath" ? nameValue.toLowerCase() : date.value;
+         numberTypeName !== "senderoVida" ? nameValue.toLowerCase() : date.value;
        const resultText = numberType.className.split("-");
  
        setTimeout(() => {
          numberTypesMap[numberTypeName].classList.add("show");
-         numberTypesMap[numberTypeName].innerHTML = `Your ${upperCaseFirstLetter(
+         numberTypesMap[numberTypeName].innerHTML = `Tu numero de ${upperCaseFirstLetter(
            resultText
-         )} number is&nbsp;<a id=${index + 1} href="${
+         )} es &nbsp;<a id=${index + 1} href="${
            numberTypeLinks[numberTypeName]
          }" target="_blank" >${numberTypeFunc(funcArg)}</a>`;
  
