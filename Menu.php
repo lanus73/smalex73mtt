@@ -14,12 +14,12 @@
           Servicios
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="Metafisica.php">Metafísica</a>
-          <a class="dropdown-item" href="Numerologia.php">Numerología</a>
-          <a class="dropdown-item" href="Biodecodificacion.php">Biodecodificación</a>
-          <a class="dropdown-item" href="Astrologia.php">Astrología</a>
-          <a class="dropdown-item" href="Angeologia.php">Angeología</a>
-          <a class="dropdown-item" href="Meditacion.php">Meditación</a>
+          <a class="dropdown-item" href="metafisica.php">Metafísica</a>
+          <a class="dropdown-item" href="numerologia.php">Numerología</a>
+          <a class="dropdown-item" href="biodecodificacion.php">Biodecodificación</a>
+          <a class="dropdown-item" href="astrologia.php">Astrología</a>
+          <a class="dropdown-item" href="angeologia.php">Angeología</a>
+          <a class="dropdown-item" href="meditacion.php">Meditación</a>
         </div>
       </li>
     
