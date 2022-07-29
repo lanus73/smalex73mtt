@@ -3,7 +3,7 @@ include("cabecera.php");
 ?>
 <body>
 <?php
-include("Menu.php");
+include("menu.php");
 ?>
     <div class="content">
 
