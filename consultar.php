@@ -7,7 +7,7 @@
 
 	$hostname="localhost";
 	$username="alejandro";
-	$password="Pintame";
+	$password="Pintame"; 
 	$dbname="numerologia";
 	$usertable="sendero";
 	
