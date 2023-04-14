@@ -14,21 +14,15 @@
 	$conn=mysqli_connect($hostname,$username, $password, $dbname);
 	
 	
-    if ($conn->connect_error) {
+      if ($conn->connect_error) {
         die("ERROR: No se puede conectar al servidor: " . $conn->connect_error);
         exit;
-    } 
-    
-  
-      $query = "SELECT * FROM sendero where id = ".$valor;
+      } 
+          $query = "SELECT * FROM sendero where id = ".$valor;
 
       if ($execquery = $conn->query($query)) {
         $result = $execquery->fetch_all(MYSQLI_ASSOC);
         $resultjson= json_encode($result[0]);
          echo ($resultjson); 
-    }
-
-    
-  
-
+      }
 ?>

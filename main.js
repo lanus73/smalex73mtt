@@ -6,7 +6,7 @@ function fnAceptar () {
    const charToVal = {};
    const name = document.querySelector(`[name="name"]`);
    const form = document.querySelector(".main-form");
-   const date = document.querySelector(".dob");
+   const date = document.querySelector("#datepicker");
    const save = document.querySelector("#save");
    const senderoVida = document.querySelector(".sendero-vida");
    const alma = document.querySelector(".alma");
@@ -61,7 +61,7 @@ function fnAceptar () {
    }
  
    function calculateLifePath(birthdate) {
-     const [year, month, day] = birthdate.split("-");
+     const [day, month,year ] = birthdate.split("-");
      const sum = parseInt(year) + parseInt(month) + parseInt(day);
      return reduceNumber(sum);
    }
@@ -156,13 +156,6 @@ function fnAceptar () {
      scrollToResults();
    }
  
-   function dateBlur(e) {
-     this.type = "text";
-   }
- 
-   function dateFocus(e) {
-     this.type = "date";
-   }
  
    function convertClassNameToCamelCase(str) {
      const words = str.split("-");
@@ -207,28 +200,8 @@ function fnAceptar () {
        nameError.classList.add("error-show");
        isValid = false;
      }
- 
-     if (!date.value) {
-       dateError.innerHTML = "Please enter a birth date";
-       dateError.classList.add("error-show");
-       isValid = false;
-       return isValid;
-     }
- 
-     const [year, month, day] = date.value.split("-");
-     const yearRegExp = new RegExp(/^\d{4}$/, "g");
-     const monthAndDayRegExp = new RegExp(/^\d{2}$/, "g");
- 
-     const isValidYear = year.match(yearRegExp);
-     const isValidMonth = month.match(monthAndDayRegExp);
-     const isValidDay = day.match(monthAndDayRegExp);
- 
-     if (!isValidYear || !isValidMonth || !isValidDay) {
-       dateError.innerHTML = "Please enter valid date";
-       dateError.classList.add("error-show");
-       isValid = false;
-     }
- 
+    
+   
      return isValid;
    }
  
@@ -243,6 +216,4 @@ function fnAceptar () {
    }
  
    form.addEventListener("submit", doCalculations);
-   date.addEventListener("blur", dateBlur);
-   date.addEventListener("focus", dateFocus);
  })();
