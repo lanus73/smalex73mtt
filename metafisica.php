@@ -6,17 +6,15 @@ include("cabecera.php");
 include("Menu.php");
 ?>
     <div class="content">
-    <h2 class="clsTitulo">
-        METAFISICA
-    </h2>
-    <span  class="clsTitulo" id="lblTitulo"> 
-        Titulo
+    <center>  
+        <h2 class="clsTitulo">
+            METAFISICA
+        </h2>
+        <span  class="clsTitulo" id="lblTitulo"> Titulo
+    
     </span> 
-    <button id="btnAceptar" onclick="javascript: fnAceptar();"> 
-    Aceptar</button>
-    <input name="txtInput" id="txtInput"/>
-
-</div> 
+    </center>
+   </div> 
 </body>
 </html>
 <?php
